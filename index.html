@@ -21,6 +21,11 @@
 <p id="userAgent"></p>
 <p id="vendor"></p>
 <p id="vendorSub"></p>
+<p id="appName"></p>
+<p id="localStorage"></p>
+<p id="sessionStorage"></p>
+<p id="onLine"></p>
+<p id="permissions"></p>
 <script>
 document.getElementById("appName").innerHTML =
 "navigator.appName: " + navigator.appName;
@@ -56,7 +61,14 @@ document.getElementById("vendorSub").innerHTML =
 "window.navigator.vendorSub: " + window.navigator.vendorSub;
 document.getElementById("appName").innerHTML =
 "navigator.appName: " + navigator.appName;
-
+document.getElementById("localStorage").innerHTML =
+"window.localStorage: " + window.localStorage;
+document.getElementById("sessionStorage").innerHTML =
+"window.sessionStorage: " + window.sessionStorage;
+document.getElementById("onLine").innerHTML =
+"window.navigator.onLine: " + window.navigator.onLine;
+document.getElementById("permissions").innerHTML =
+"window.navigator.permissions: " + window.navigator.permissions;
 </script>
 </body>
 </html>
