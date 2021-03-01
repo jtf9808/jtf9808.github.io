@@ -5,9 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-<dialog open>
-<p>Greetings, one and all!</p>
-</dialog>
 <p id="appName"></p>
 <p id="appCodeName"></p>
 <p id="appVersion"></p>
@@ -30,6 +27,7 @@
 <p id="permissions"></p>
 <p id="chrome_element"></p>
 <script>
+window.alert("hi");
 document.getElementById("appName").innerHTML =
 "navigator.appName: " + navigator.appName;
 document.getElementById("appCodeName").innerHTML =
