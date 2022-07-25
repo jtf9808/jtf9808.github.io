@@ -109,5 +109,24 @@ document.getElementById("chrome_element").innerHTML =
 "window.chrome: " + window.chrome;
 
 </script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    var intervalID = window.setInterval(myCallback, 5);
+
+function myCallback(){
+
+        var xhr = $.ajax({
+        type: "POST",
+        url: "some.php",
+        data: "name=John&location=Boston",
+        success: function(msg){
+           alert( "Data Saved: " + msg );
+            }
+        });
+
+        //kill the request
+        xhr.abort()}
+</script>
 </body>
 </html>
