@@ -2,220 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>New site</title>
-<!--     <link rel="stylesheet" href="https://httpstat.us/200?sleep=100000"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Prince-Fulls</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+        ul li {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
-<!-- <style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.bgimg {
-  background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style> -->
-<script>
-function setCookie(cname, cvalue, exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  let expires = "expires="+d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-  let name = cname + "=";
-  let ca = document.cookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  let counter = getCookie("counter");
-  if (counter != "") {
-      counter = JSON.parse(counter)
-      counter += 1 ;
-
-  } else {
-    counter = 1;
-  }
-  counter = JSON.stringify(counter)
-  element = document.getElementById("visits")
-   
-  element.innerHTML = counter;
-  setCookie("counter", counter, 365);
-}
-</script>                           
-<body onload="checkCookie()">
-<div class="bgimg">
-  <div class="topleft">
-    <p>Logo</p>
-  </div>
-  <div class="middle">
-    <h1>Brand New Website</h1>
-    <hr>
-    <p id="demo" style="font-size:30px"></p>
-  </div>
-  <div class="bottomleft">
-    <p>Visits: <div id='visits'>N/A</div></p>
-  </div>
-</div>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-  
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-  
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-<!-- <p id="appName"></p>
-<p id="appCodeName"></p>
-<p id="appVersion"></p>
-<p id="buildID"></p>
-<p id="cookieEnabled"></p>
-<p id="doNotTrack"></p>
-<p id="geolocation"></p>
-<p id="language"></p>
-<p id="languages"></p>
-<p id="oscpu"></p>
-<p id="platform"></p>
-<p id="product"></p>
-<p id="productSub"></p>
-<p id="userAgent"></p>
-<p id="vendor"></p>
-<p id="vendorSub"></p>
-<p id="localStorage"></p>
-<p id="sessionStorage"></p>
-<p id="onLine"></p>
-<p id="permissions"></p>
-<p id="chrome_element"></p> -->
-<!-- <script>
-window.alert("hi");
-document.getElementById("appName").innerHTML =
-"navigator.appName: " + navigator.appName;
-document.getElementById("appCodeName").innerHTML =
-"window.navigator.appCodeName: " + window.navigator.appCodeName;
-document.getElementById("appVersion").innerHTML =
-"window.navigator.appVersion: " + window.navigator.appVersion;
-document.getElementById("buildID").innerHTML =
-"window.navigator.buildID: " + window.navigator.buildID;
-document.getElementById("cookieEnabled").innerHTML =
-"window.navigator.cookieEnabled: " + window.navigator.cookieEnabled;
-document.getElementById("doNotTrack").innerHTML =
-"window.navigator.doNotTrack: " + window.navigator.doNotTrack;
-document.getElementById("geolocation").innerHTML =
-"window.navigator.geolocation: " + window.navigator.geolocation;
-document.getElementById("language").innerHTML =
-"window.navigator.language: " + window.navigator.language;
-document.getElementById("languages").innerHTML =
-"window.navigator.languages: " + window.navigator.languages;
-document.getElementById("oscpu").innerHTML =
-"window.navigator.oscpu: " + window.navigator.oscpu;
-document.getElementById("platform").innerHTML =
-"window.navigator.platform: " + window.navigator.platform;
-document.getElementById("product").innerHTML =
-"window.navigator.product: " + window.navigator.product;
-document.getElementById("productSub").innerHTML =
-"window.navigator.productSub: " + window.navigator.productSub;
-document.getElementById("userAgent").innerHTML =
-"window.navigator.userAgent: " + window.navigator.userAgent;
-document.getElementById("vendor").innerHTML =
-"window.navigator.vendor: " + window.navigator.vendor;
-document.getElementById("vendorSub").innerHTML =
-"window.navigator.vendorSub: " + window.navigator.vendorSub;
-document.getElementById("localStorage").innerHTML =
-"window.localStorage: " + window.localStorage;
-document.getElementById("sessionStorage").innerHTML =
-"window.sessionStorage: " + window.sessionStorage;
-document.getElementById("onLine").innerHTML =
-"window.navigator.onLine: " + window.navigator.onLine;
-document.getElementById("permissions").innerHTML =
-"window.navigator.permissions: " + window.navigator.permissions;
-document.getElementById("chrome_element").innerHTML =
-"window.chrome: " + window.chrome;
-
-</script> -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<script>
-    var intervalID = window.setInterval(myCallback, 0.5);
-
-function myCallback(){
-
-        var xhr = $.ajax({
-        type: "POST",
-        url: "some.php",
-        data: "name=John&location=Boston",
-        success: function(msg){
-           alert( "Data Saved: " + msg );
-            }
-        });
-
-        //kill the request
-        xhr.abort()}
-</script> -->
+<body>
+    <header>Jack Prince-Fulls</header>
+    <section>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        <h2>About Me</h2>
+        <p>Hi, I'm Jack. I'm a research scientist/engineer specialising in safe and scalable machine learning methods.</p>
+        <p> <a href="/CV_Jack_Prince_Fulls.pdf" target="_blank">Check out my CV</a></p>
+    </section>
+    <section>
+        <h2>Research Interests</h2>
+        <p>My research interests include developing AI models for digital asset protection and, more recently, AI saftey with a focus on mechanistic and developmental interpretability. Currently, I'm developing models for audio as well as trying to understand circuit formation in transformers.</p>
+    </section>
+    <section>
+        <h2>Check Out My GitHub Projects</h2>
+        <ul>
+            <li><a href="https://github.com/jtf9808/shared-circuit-formation" target="_blank">Shared Circuit Formation</a> - <b>WIP</b> - Exploring how circuits form together in transformer networks.</li>
+            <li><a href="https://github.com/jtf9808/rank-one-model-editing" target="_blank">Rank-One Model Editing</a> - Exploring rank-one updates for modifying neural networks efficiently.</li>
+            <li><a href="https://github.com/jtf9808/Superposition-in-Non-linear-Neural-Networks" target="_blank">Superposition in Non-linear Neural Networks</a> - Extending graphs from Toy Models of Superposition.</li>
+            <li><a href="https://github.com/jtf9808/gpt2-from-scratch" target="_blank">GPT-2 from Scratch</a> - Implementing GPT-2 from the ground up to better understand its architecture.</li>
+            <li><a href="https://github.com/jtf9808/3D-printing-mechanical-metamaterials" target="_blank">Using 3D printing to realise ball-and-spring metamaterial designs</a> - My master's thesis on 3d printing mechanical metamaterials.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:jtf982@gmail.com">jtf982@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/jtf9808" target="_blank">github.com/jtf9808</a></p>
+    </section>
 </body>
 </html>
